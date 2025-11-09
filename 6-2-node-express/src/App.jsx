@@ -130,17 +130,25 @@ Example:
 
 */
 
-
 import { useState } from "react";
 import "./index.css";
 
+// -------------------------------
+// ✅ React App Implementation
+// -------------------------------
 function App() {
   const [quote, setQuote] = useState("");
 
+  // Fetches a random quote from Express backend
   const fetchQuote = async () => {
-    const res = await fetch("http://localhost:3000/api/quote");
-    const data = await res.json();
-    setQuote(data.quote);
+    try {
+      const res = await fetch("http://localhost:3000/api/quote");
+      const data = await res.json();
+      setQuote(data.quote);
+    } catch (err) {
+      console.error(err);
+      setQuote("Failed to fetch quote. Is the backend running on port 3000?");
+    }
   };
 
   return (
@@ -151,7 +159,11 @@ function App() {
           Get Quote
         </button>
         <div className="quote-box">
-          {quote ? <p className="quote">{quote}</p> : <p className="placeholder">Click the button to get a quote</p>}
+          {quote ? (
+            <p className="quote">{quote}</p>
+          ) : (
+            <p className="placeholder">Click the button to get a quote</p>
+          )}
         </div>
       </div>
     </div>

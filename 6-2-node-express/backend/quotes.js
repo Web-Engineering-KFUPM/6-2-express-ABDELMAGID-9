@@ -1,5 +1,3 @@
-import { getRandomInt } from "./utils/random.js";
-
 const quotes = [
   "Code is like humor. When you have to explain it, it’s bad.",
   "Before software can be reusable it first has to be usable.",
@@ -8,5 +6,6 @@ const quotes = [
 ];
 
 export function getRandomQuote() {
- return {/*write code to here*/}
+  const i = Math.floor(Math.random() * quotes.length); 
+  return quotes[i];
 }

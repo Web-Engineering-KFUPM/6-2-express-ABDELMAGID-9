@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "generatedAt": "2025-11-09T10:39:18.062Z",
+    "repoRoot": "C:\\Users\\jeddo\\OneDrive\\المستندات\\6-2-express-ABDELMAGID-9",
+    "dueUTC": "2025-11-10T20:59:59Z",
+    "lastCommitISO": "2025-11-09T10:03:32Z"
+  },
+  "scoring": {
+    "labPoints": 80,
+    "submissionPoints": 20,
+    "submissionStatus": "On time (20/20)",
+    "total": 100
+  },
+  "details": [
+    {
+      "todo": "TODO 1: Initialize Express App (server.js)",
+      "points": 16,
+      "breakdown": {
+        "completeness": 8,
+        "correctness": 4,
+        "quality": 4
+      },
+      "feedback": [
+        "✅ Imported express.",
+        "✅ Created app with express().",
+        "✅ Defined PORT (3000 or env).",
+        "✅ Started server with app.listen."
+      ]
+    },
+    {
+      "todo": "TODO 2: Random Integer Helper (backend/utils/random.js)",
+      "points": 16,
+      "breakdown": {
+        "completeness": 8,
+        "correctness": 4,
+        "quality": 4
+      },
+      "feedback": [
+        "✅ Found random.js.",
+        "✅ Exported getRandomInt.",
+        "✅ Uses Math.random().",
+        "✅ Uses Math.floor()."
+      ]
+    },
+    {
+      "todo": "TODO 3: getRandomQuote (quotes.js)",
+      "points": 16,
+      "breakdown": {
+        "completeness": 8,
+        "correctness": 4,
+        "quality": 4
+      },
+      "feedback": [
+        "✅ Found quotes.js.",
+        "✅ Exported getRandomQuote.",
+        "✅ Uses a quotes array.",
+        "✅ Selects random index via Math.floor(Math.random()*quotes.length)."
+      ]
+    },
+    {
+      "todo": "TODO 4: Enable CORS (server.js)",
+      "points": 16,
+      "breakdown": {
+        "completeness": 8,
+        "correctness": 4,
+        "quality": 4
+      },
+      "feedback": [
+        "✅ Imported cors.",
+        "✅ Enabled CORS with app.use(cors())."
+      ]
+    },
+    {
+      "todo": "TODO 5: Define Routes (server.js)",
+      "points": 16,
+      "breakdown": {
+        "completeness": 8,
+        "correctness": 4,
+        "quality": 4
+      },
+      "feedback": [
+        "✅ Route GET / is defined.",
+        "✅ GET / sends text via res.send().",
+        "✅ Route GET /api/quote is defined.",
+        "✅ GET /api/quote responds with res.json({ ... }).",
+        "✅ Server references getRandomQuote helper."
+      ]
+    }
+  ]
+}
